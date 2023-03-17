@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean class="com.springcore.springcore.Student" name="Student1"
+		p:studentId="848" p:studentName="Pial" p:studentAddress="Dhaka"/>
+		<!--<property name="studentId" value="3423"/>
+		<property name="studentName" value="Pial"/>
+		<property name="studentAddress" value="Dinajpur"/> -->
+	 
+	<!-- Second bean-->
+	<bean class="com.springcore.springcore.Student" name="Student2"
+	p:studentId="4343" p:studentName="Ehashan" p:studentAddress="Dinajpur"/>
+	 
+</beans>

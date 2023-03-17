@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd"
+>
+	<context:annotation-config />
+	<!-- stand alone list-->
+	<util:list list-class="java.util.LinkedList" id="mybestfriends">
+		<value>Pial</value>
+		<value>Pial1</value>
+		<value>Pial2</value>
+		<value>Pial3</value>
+	</util:list>
+	<!--	stand alone map-->
+	<util:map map-class="java.util.HashMap" id="fees">
+		<entry key="Java Core" value="8000" />
+		<entry key="Spring frameword" value="5000" />
+		
+	</util:map>
+	<bean class="com.springcore.standalone.collections.Person"
+		name="person1">
+		<!-- 	<property name="friend">
+			 <ref bean="mybestfriends"/>
+		 </property>-->
+		<property name="friends" ref="mybestfriends" />
+		<property name="feeStruct" ref="fees" />
+	</bean>
+</beans>

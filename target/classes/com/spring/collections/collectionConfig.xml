@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	
+	<bean class="com.spring.collections.Employee" name="emp1" >
+		<property name="name" value="Pial" />
+		<property name="phones">
+			<list>
+				<value>0173940473</value>
+				<value>8923930</value>
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>Dinajpur</value>
+				<value>Dhaka</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map> 
+				<entry key="java" value="2month"/>
+				<entry key="python" value="1.2months"/>
+			 </map>
+		</property>
+	</bean>
+</beans>

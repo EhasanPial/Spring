@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean class="com.springcore.ci.Certificate" name="c1"
+		c:name="Python programming" />
+		
+	<bean class="com.springcore.ci.Person" name="p1">
+		<constructor-arg value="Pial" />
+		<constructor-arg value="12" type="int" />
+		<constructor-arg ref="c1" />
+	</bean>
+</beans>
